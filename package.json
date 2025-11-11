@@ -1,0 +1,36 @@
+{
+  "name": "aprende_peru_api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config ./config/jest.unit.config.js --runInBand --coverage",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config ./config/jest.integration.config.js --runInBand --coverage",
+    "test": "npm run test:unit && npm run test:integration"
+  },
+  "keywords": [],
+  "author": "Alejandro Bueno",
+  "license": "ISC",
+  "description": "Api de e-comerce de cursos virtuales",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "luxon": "^3.7.1",
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "artillery": "^1.7.9",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
