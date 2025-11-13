@@ -12,4 +12,9 @@ router.use("/usuarios", rUsuarios);
 router.use("/compras", rCompras);
 router.use("/seguridad", rSeguridad);
 
+// Ruta de test
+router.get("/test", (req, res) => {
+    res.json({ message: "Ruta de test funcionando correctamente 🚀" });
+});
+
 export default router;
