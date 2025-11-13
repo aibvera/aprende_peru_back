@@ -20,13 +20,11 @@ const router = express.Router();
  *   get:
  *     summary: Obtener todos los cursos
  *     tags: [Cursos]
- *     security:
- *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Lista de cursos
  */
-router.get("/", authMiddleware, cCursos.getAllCourses);
+router.get("/", cCursos.getAllCourses);
 
 
 /**
@@ -35,8 +33,6 @@ router.get("/", authMiddleware, cCursos.getAllCourses);
  *   get:
  *     summary: Obtener curso por ID
  *     tags: [Cursos]
- *     security:
- *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -48,7 +44,7 @@ router.get("/", authMiddleware, cCursos.getAllCourses);
  *       200:
  *         description: Devuelve los datos de un curso específico
  */
-router.get("/:id", authMiddleware, cCursos.getCourseById);
+router.get("/:id", cCursos.getCourseById);
 
 
 /**
