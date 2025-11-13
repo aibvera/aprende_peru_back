@@ -14,7 +14,7 @@ router.use("/seguridad", rSeguridad);
 
 // Ruta de test
 router.get("/test", (req, res) => {
-    res.json({ message: "Ruta de test funcionando correctamente 🚀" });
+    res.json({ message: "Ruta de test v2 funcionando correctamente 🚀" });
 });
 
 export default router;
