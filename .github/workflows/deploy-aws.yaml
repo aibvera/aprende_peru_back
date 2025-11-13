@@ -19,6 +19,8 @@ jobs:
 
     - name: 3. Copiar archivos al servidor con rsync
       run: |
+        set -x  # muestra cada comando antes de ejecutarlo
+
         # Agrega la huella digital del servidor para evitar la pregunta interactiva
         ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
